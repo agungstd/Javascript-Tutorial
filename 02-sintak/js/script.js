@@ -1,19 +1,22 @@
+// Output "Hello World" to the console
 console.log("Hello World");
 
 /*
- * 1. remark multi row
- * 2. akhir dari statemnet akhiri titik koma
- * 3. spasi kosong diabaikan oleh javascript
- * 4. blok script diawali dengan { }
- * 5. javascript case sensitive
- * 6. pembuatan variable tidak boleh mengunakan karaketer khusus (: + )
- *
+ * JavaScript Style Guidelines:
+ * 1. Use multi-line comments for documentation blocks
+ * 2. End statements with semicolons
+ * 3. Whitespace is ignored by JavaScript
+ * 4. Code blocks use curly braces { }
+ * 5. JavaScript is case-sensitive
+ * 6. Variable names cannot contain special characters (: +)
  */
 
-// ini remark 1 row
+// Single line comment example
 
-let format = true;
+// Use consistent variable naming
+let isFormatted = true;
 
-if (format) {
-  console.log("COntoh Saja");
+// Properly indented conditional block
+if (isFormatted) {
+  console.log("Contoh Saja");
 }

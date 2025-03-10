@@ -1,20 +1,22 @@
-// VARIABLE JAVASCRIPT
+// JAVASCRIPT VARIABLES
 
-//ATURAN MEMBUAT VARIABLE DI JAVASCRIPT
-// 1. case sensitive variable
-// 2. tidak boleh menggunakan karakter khusus
-// 3. tidak boleh mengunakan kata yang digunakan khusus
-// 4. Java script memili variable dinamis
-// 5. jika satu kata gunakan huruf kecl, duakata
-// 6. initialisasi variable
-// 7. Setaiap akhir dari statement / variable akhiri ;
-// 8. Mulai dari ES6 kita bisa menggunaan let
-// 9. membuat variable lebih dari 1
-// 10.perbedaan error undevinie & not definid
-// 11 constanta
+// RULES FOR CREATING VARIABLES IN JAVASCRIPT
+// 1. Variables are case sensitive
+// 2. Variable names cannot contain special characters
+// 3. Reserved keywords cannot be used as variable names
+// 4. JavaScript uses dynamic typing
+// 5. Use camelCase for multi-word variable names
+// 6. Always initialize variables
+// 7. End each statement/variable declaration with a semicolon
+// 8. Since ES6, we can use 'let' and 'const'
+// 9. Multiple variables can be declared in one statement
+// 10. Difference between 'undefined' and 'not defined' errors
+// 11. Constants must be initialized and cannot be reassigned
 
+// Example of a constant (this will cause an error when reassigned)
 const angka = 5;
 
-angka = 2;
+// This line will cause an error because constants cannot be reassigned
+// angka = 2;
 
 console.log(angka);

@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<!-- 
-Author  = Pojok Code
-Date    = 2022-12-09
-File    = index.html
--->
-<html lang="en">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>JavaScript Demo Page</title>
+      <link rel="shortcut icon" href="#">
+      <link href="" rel="stylesheet">
+      <!-- Move JavaScript to end of body for better page loading -->
+      <!-- <script src="js/script.js"></script> -->
+    </head>
 
-<head>
-  <title></title>
-  <link rel="shortcut icon" href="#" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="" rel="stylesheet" />
-  <script src="js/script.js"></script>
-</head>
-<div></div>
+    <body>
+      <h1>Ini Adalah Heading</h1>
+      <p>Ini adalah Paragraf</p>
 
-<body>
-  <h1>Ini Adalah Heading</h1>
-  <p>INi adalah Paragraf</p>
-  <button type="button" onclick="document.write('Hello World');">
-    Klik Aku
-  </button>
-  <p id="great"></p>
-  <p id="result"></p>
-  <script>
-    document.getElementById("great").innerHTML = "Hello World";
-    var x = 30;
-    var y = 10;
-    var sum = x + y;
-    document.getElementById("great").innerHTML = sum;
-  </script>
+      <button type="button" onclick="document.write('Hello World');">
+        Klik Aku
+      </button>
+
+    <p id="great"></p>
+    <p id="result"></p>
+      
+    <!-- External JavaScript file should be loaded at the end of body -->
+    <script src="js/script.js"></script>
+      
+    <!-- Inline JavaScript -->
+    <script>
+      // Get element and set initial content
+      document.getElementById("great").innerHTML = "Hello World";
+    
+      // Calculate and display sum
+      var x = 30;
+      var y = 10;
+      var sum = x + y;
+      document.getElementById("great").innerHTML = sum;
+    </script>
 </body>
 
 </html>
