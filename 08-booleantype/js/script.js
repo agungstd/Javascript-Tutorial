@@ -1,5 +1,4 @@
-//boolean adalah type data primitif
-
+// boolean adalah type data primitif
 let completed = true;
 let active = new Boolean(false);
 
@@ -26,3 +25,12 @@ let false2 = true;
 if (false2) {
   console.log("Ini kondisi primitif");
 }
+
+// Tambahan kode baru tanpa menghapus kode lama
+let isBooleanPrimitive = (value) => typeof value === "boolean"; // Menambahkan fungsi untuk memeriksa apakah nilai adalah boolean primitif
+console.log(isBooleanPrimitive(completed)); // true
+console.log(isBooleanPrimitive(active)); // false
+
+let booleanTest = new Boolean(true);
+booleanTest.newProperty = "Hello World"; // Menambahkan properti baru untuk objek boolean
+console.log(booleanTest.newProperty);
