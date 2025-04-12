@@ -5,7 +5,7 @@ console.log(pesan);
 
 let nam = `Pojo0k Code`;
 console.log(nam);
-let msg = `"I'm good". sorry"`;
+let msg = `"I'm good". sorry`;
 console.log(msg);
 
 let nama = "Pojok Code";
@@ -33,3 +33,12 @@ let sts1 = status1.toString();
 let back = Boolean(sts1);
 back = Boolean("false");
 console.log(back);
+
+let upperName = name1.toUpperCase(); // Menambahkan fitur untuk mengubah string menjadi huruf kapital
+console.log(upperName);
+
+let reversedMessage = pesan.split("").reverse().join(""); // Menambahkan fitur untuk membalik string
+console.log(reversedMessage);
+
+let containsKeyword = pesan.includes("Subscribe"); // Menambahkan pemeriksaan apakah string mengandung keyword tertentu
+console.log(containsKeyword);
