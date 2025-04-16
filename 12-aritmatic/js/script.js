@@ -1,21 +1,21 @@
-// Operasi Matematika: Tambah (+), Kurang (-), Bagi (/), Kali (*)
+// Mathematical Operations: Addition (+), Subtraction (-), Division (/), Multiplication (*)
 let sum = 10 + 20;
-console.log(`Hasil penjumlahan: ${sum}`);
+console.log(`Addition result: ${sum}`);
 
-let price = 9.99, diskon = 1.5;
-console.log(`Harga setelah diskon: ${price - diskon}`);
+let price = 9.99, discount = 1.5;
+console.log(`Price after discount: ${price - discount}`);
 
 let x = "10", y = "20";
-console.log(`Gabungan string x + y: ${x + y}`);
+console.log(`String concatenation x + y: ${x + y}`);
 
-let hasil = 10 + "20";
-console.log(`Gabungan angka dan string: ${hasil}`);
+let result = 10 + "20";
+console.log(`Number + String concatenation: ${result}`);
 
-console.log(`Hasil pengurangan: ${30 - 10}`);
-console.log(`Hasil perkalian: ${30 * 10}`);
-console.log(`Perkalian dengan string angka: ${"30" * 10}`);
-console.log(`Pembagian dengan string angka: ${"30" / 10}`);
-console.log(`Hasil pembagian: ${30 / 10}`);
+console.log(`Subtraction result: ${30 - 10}`);
+console.log(`Multiplication result: ${30 * 10}`);
+console.log(`Multiplication with string number: ${"30" * 10}`);
+console.log(`Division with string number: ${"30" / 10}`);
+console.log(`Division result: ${30 / 10}`);
 
 let energy = {
   valueOf() {
@@ -30,7 +30,7 @@ console.log(`Energy / 5: ${energy / 5}`);
 
 let energy2 = {
   toString() {
-    return "100"; // Perubahan kecil agar perilaku lebih eksplisit
+    return "100"; // Adjusted behavior for explicit conversion
   },
 };
 
@@ -38,3 +38,11 @@ energyNow = energy2 - 10;
 console.log(`Energy2 + 100: ${energy2 + 100}`);
 console.log(`Energy2 * 10: ${energy2 * 10}`);
 console.log(`Energy2 / 5: ${energy2 / 5}`);
+
+// Additional feature: Check if a number is even or odd
+function isEvenOrOdd(num) {
+  return num % 2 === 0 ? "Even" : "Odd";
+}
+
+console.log(`Is 30 even or odd? ${isEvenOrOdd(30)}`);
+console.log(`Is 99 even or odd? ${isEvenOrOdd(99)}`);
