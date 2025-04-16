@@ -1,44 +1,49 @@
-// string adalah type data primitif
-let str = "Selamat Datang";
-let pesan = "Jangan Lupa Subscribe";
-console.log(pesan);
+// String is a primitive data type
+let str = "Welcome";
+let message = "Don't forget to subscribe";
+console.log(`Message: ${message}`);
 
-let nam = `Pojo0k Code`;
-console.log(nam);
-let msg = `"I'm good". sorry`;
-console.log(msg);
+let name = `Pojok Code`;
+console.log(`Template literal example: ${name}`);
 
-let nama = "Pojok Code";
-let psn = `HI, I"m ${nama}`;
-console.log(psn);
+let msg = `"I'm good". Sorry`;
+console.log(`Quoted string example: ${msg}`);
 
-let pesan1 = "Ini\nadalah\tcontoh 'string\"";
-console.log(pesan1);
+let userName = "Pojok Code";
+let greeting = `Hi, I'm ${userName}`;
+console.log(`String interpolation example: ${greeting}`);
 
-pesan1 = "Hai Apa Kabar";
-console.log(pesan1.length);
-console.log(pesan1[0]);
+let formattedMessage = "This\nis\tan example of 'string\"";
+console.log(`Escaped characters example: ${formattedMessage}`);
 
-let nmadepan = "Pojok";
-let name1 = nmadepan + " Code";
-console.log(name1);
+formattedMessage = "Hello, how are you?";
+console.log(`String length: ${formattedMessage.length}`);
+console.log(`First character: ${formattedMessage[0]}`);
 
-let nmClass = "btn";
-nmClass += " btn-promary";
-nmClass += " null";
-console.log(nmClass);
+let firstName = "Pojok";
+let fullName = firstName + " Code";
+console.log(`Concatenated string: ${fullName}`);
 
-let status1 = false;
-let sts1 = status1.toString();
-let back = Boolean(sts1);
-back = Boolean("false");
-console.log(back);
+let className = "btn";
+className += " btn-primary"; // Fixed typo
+className += " null";
+console.log(`Updated class name: ${className}`);
 
-let upperName = name1.toUpperCase(); // Menambahkan fitur untuk mengubah string menjadi huruf kapital
-console.log(upperName);
+let status = false;
+let statusString = status.toString();
+let booleanValue = Boolean(statusString);
+booleanValue = Boolean("false");
+console.log(`Converted boolean value: ${booleanValue}`);
 
-let reversedMessage = pesan.split("").reverse().join(""); // Menambahkan fitur untuk membalik string
-console.log(reversedMessage);
+let upperCaseName = fullName.toUpperCase(); // Convert string to uppercase
+console.log(`Uppercase string: ${upperCaseName}`);
 
-let containsKeyword = pesan.includes("Subscribe"); // Menambahkan pemeriksaan apakah string mengandung keyword tertentu
-console.log(containsKeyword);
+let reversedMessage = message.split("").reverse().join(""); // Reverse string
+console.log(`Reversed string: ${reversedMessage}`);
+
+let containsKeyword = message.includes("Subscribe"); // Check if string contains a keyword
+console.log(`Does the string contain 'Subscribe'? ${containsKeyword}`);
+
+// Additional feature: Count occurrences of a specific character
+let countOccurrences = (text, char) => text.split(char).length - 1;
+console.log(`Occurrences of 'a' in message: ${countOccurrences(message, 'a')}`);
