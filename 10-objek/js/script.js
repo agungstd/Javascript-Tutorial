@@ -1,41 +1,41 @@
-// Javascript Objek
-let kosong = {};
-console.log(kosong);
+// JavaScript Objects
+let emptyObject = {};
+console.log(emptyObject);
 
 let personal = {
-  namaDepan: "Pojok",
-  namaAkhir: "Code",
+  firstName: "Pojok",
+  lastName: "Code",
 };
 
 console.log(personal);
-console.log(personal.namaDepan);
-console.log(personal.namaAkhir);
+console.log(personal.firstName);
+console.log(personal.lastName);
 
-console.log(personal["namaDepan"]);
-console.log(personal["namaAkhir"]);
+console.log(personal["firstName"]);
+console.log(personal["lastName"]);
 
-let alamat = {
-  "nomor rumah": 1234,
-  jalan: "Flamboyan no 44",
-  propinsi: "DKI",
+let address = {
+  "house number": 1234,
+  street: "Flamboyan No. 44",
+  province: "DKI",
 };
 
-console.log(alamat["nomor rumah"]);
+console.log(address["house number"]);
 
-// Validasi akses properti sebelum digunakan
-if ("nomor rumah" in alamat) {
-  console.log(alamat["nomor rumah"]);
+// Validate property access before use
+if ("house number" in address) {
+  console.log(address["house number"]);
 } else {
-  console.log("Properti 'nomor rumah' tidak ditemukan");
+  console.log("Property 'house number' not found");
 }
 
-personal.namaDepan = "Percobaan";
+personal.firstName = "Trial";
 personal.age = 24;
 console.log(personal);
 
 delete personal.age;
 console.log(personal);
 
-// Cek properti objek dengan validasi
-console.log("namaDepan" in personal ? "Properti tersedia" : "Properti tidak ditemukan");
-console.log("age" in personal ? "Properti tersedia" : "Properti tidak ditemukan");
+// Check object properties with validation
+console.log("firstName" in personal ? "Property exists" : "Property not found");
+console.log("age" in personal ? "Property exists" : "Property not found");
