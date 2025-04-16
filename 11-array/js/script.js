@@ -1,4 +1,4 @@
-// Javascript Array
+// JavaScript Array
 let score = new Array();
 console.log(score);
 
@@ -11,37 +11,57 @@ console.log(score);
 score = Array(40, 50);
 console.log(score);
 
-let warna = ["red", "green", "blue"];
-console.log(warna);
+let colors = ["red", "green", "blue"];
+console.log(colors);
 
-warna = [];
-console.log(warna);
+colors = [];
+console.log(colors);
 
-let provinsi = ["DKI Jakarta", "Jawa Barat", "Jawa Tengah"];
-console.log(provinsi[0]);
-console.log(provinsi[1]);
-console.log(provinsi[2]);
+let provinces = ["DKI Jakarta", "West Java", "Central Java"];
+console.log(provinces[0]);
+console.log(provinces[1]);
+console.log(provinces[2]);
 
-provinsi[1] = "Papua Barat";
-console.log(provinsi);
+provinces[1] = "West Papua";
+console.log(provinces);
 
-console.log(`Jumlah elemen dalam array: ${provinsi.length}`);
+console.log(`Number of elements in the array: ${provinces.length}`);
 
-provinsi.push("Jawa Timur");
-console.log(provinsi);
+provinces.push("East Java");
+console.log(provinces);
 
-provinsi.unshift("Kalimantan Barat");
-console.log(provinsi);
+provinces.unshift("West Kalimantan");
+console.log(provinces);
 
-const valueAkhir = provinsi.pop();
-console.log(`Elemen yang dihapus dari akhir array: ${valueAkhir}`);
-console.log(provinsi);
+const lastValue = provinces.pop();
+console.log(`Element removed from the end of the array: ${lastValue}`);
+console.log(provinces);
 
-const valueAwal = provinsi.shift();
-console.log(`Elemen yang dihapus dari awal array: ${valueAwal}`);
-console.log(provinsi);
+const firstValue = provinces.shift();
+console.log(`Element removed from the beginning of the array: ${firstValue}`);
+console.log(provinces);
 
-let idx = provinsi.indexOf("DKI Jakarta");
-console.log(`Index dari 'DKI Jakarta': ${idx}`);
+let idx = provinces.indexOf("DKI Jakarta");
+console.log(`Index of 'DKI Jakarta': ${idx}`);
 
-console.log(`Apakah 'provinsi' merupakan array? ${Array.isArray(provinsi)}`);
+console.log(`Is 'provinces' an array? ${Array.isArray(provinces)}`);
+
+// Function to remove an element by its value
+function removeElementByValue(arr, value) {
+  const index = arr.indexOf(value);
+  if (index !== -1) {
+    arr.splice(index, 1);
+  }
+  return arr;
+}
+
+provinces = removeElementByValue(provinces, "West Papua");
+console.log(`Array after removing 'West Papua': ${provinces}`);
+
+// Function to filter provinces based on a search keyword
+function filterProvinces(arr, keyword) {
+  return arr.filter((province) => province.includes(keyword));
+}
+
+let filteredProvinces = filterProvinces(provinces, "Java");
+console.log(`Filtered provinces containing 'Java': ${filteredProvinces}`);
