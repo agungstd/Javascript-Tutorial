@@ -42,3 +42,11 @@ function isOdd2(num) {
 }
 
 console.log(`Is 5 odd? ${isOdd2(5) ? "Yes" : "No"}`);
+
+// Function to check if a number is divisible by another
+function isDivisible(num, divisor) {
+  return num % divisor === 0 ? `Yes, ${num} is divisible by ${divisor}` : `No, ${num} is not divisible by ${divisor}`;
+}
+
+console.log(isDivisible(10, 5));
+console.log(isDivisible(10, 3));
