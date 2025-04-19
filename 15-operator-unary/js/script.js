@@ -49,3 +49,24 @@ console.log(newWeight);
 let newWeight1 = weight-- + 5; // Post-decrement then addition
 console.log(weight);
 console.log(newWeight1);
+
+// Function to apply unary operators dynamically
+function applyUnaryOperation(value, operation) {
+  switch (operation) {
+    case "+":
+      return +value;
+    case "-":
+      return -value;
+    case "++":
+      return ++value;
+    case "--":
+      return --value;
+    default:
+      return value;
+  }
+}
+
+console.log(`Unary + applied to "50": ${applyUnaryOperation("50", "+")}`);
+console.log(`Unary - applied to 50: ${applyUnaryOperation(50, "-")}`);
+console.log(`Pre-increment applied to 99: ${applyUnaryOperation(99, "++")}`);
+console.log(`Pre-decrement applied to 99: ${applyUnaryOperation(99, "--")}`);
