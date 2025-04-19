@@ -15,11 +15,19 @@ b = c;
 a = b;
 console.log(a); // Assigning b to a
 
-// Function to demonstrate assignment operations
+// Function to demonstrate addition assignment
 function updateValues(x, y) {
   x += y;
   return x;
 }
 
 let value1 = 5, value2 = 15;
-console.log(`Updated value: ${updateValues(value1, value2)}`);
+console.log(`Updated value (addition): ${updateValues(value1, value2)}`);
+
+// Function to demonstrate multiplication assignment
+function multiplyValues(x, y) {
+  x *= y;
+  return x;
+}
+
+console.log(`Updated value (multiplication): ${multiplyValues(value1, value2)}`);
