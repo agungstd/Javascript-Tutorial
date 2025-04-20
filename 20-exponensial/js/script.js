@@ -15,13 +15,10 @@ console.log(`2 ** 2: ${hasil}`);
 hasil = 2 ** 4;
 console.log(`2 ** 4: ${hasil}`);
 
-hasil = 2n ** 3n; // BigInt exponentiation
-console.log(`2n ** 3n: ${hasil}`);
-
 let x = 2;
 x **= 4; // Using exponentiation assignment
 console.log(`Exponentiation assignment (x **= 4): ${x}`);
-
+s
 let out = (-2) ** 4; // Negative base exponentiation
 console.log(`(-2) ** 4: ${out}`);
 
