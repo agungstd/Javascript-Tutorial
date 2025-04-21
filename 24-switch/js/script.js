@@ -1,5 +1,5 @@
-// switch adalah cara sederhana untuk if bersarang
-// untuk pengecekan boolean
+// Switch is a simpler way to handle nested if conditions
+// Used for boolean evaluations
 // switch (expression) {
 //     case value1:
 //         statement1;
@@ -15,34 +15,34 @@
 // }
 
 let day = 3;
-let nama;
+let name;
 switch (day) {
   case 1:
-    nama = "Ahad";
+    name = "Sunday";
     break;
   case 2:
-    nama = "Senin";
+    name = "Monday";
     break;
   case 3:
-    nama = "Selasa";
+    name = "Tuesday";
     break;
   case 4:
-    nama = "Rabu";
+    name = "Wednesday";
     break;
   case 5:
-    nama = "Kamis";
+    name = "Thursday";
     break;
   case 6:
-    nama = "Jumat";
+    name = "Friday";
     break;
   case 7:
-    nama = "Sabtu";
+    name = "Saturday";
     break;
   default:
-    nama = "tidak valid";
+    name = "Invalid";
     break;
 }
-console.log(nama);
+console.log(`Day name: ${name}`);
 
 let year = 2016;
 let month = 2;
@@ -64,12 +64,23 @@ switch (month) {
     dayCount = 30;
     break;
   case 2:
-    if ((year % 4 == 0 && !(year % 100 == 0)) || year % 400 == 0) {
+    if ((year % 4 === 0 && !(year % 100 === 0)) || year % 400 === 0) {
       dayCount = 29;
     } else {
       dayCount = 28;
     }
+    break;
   default:
-    dayCount - 1;
+    dayCount = -1; // Assign proper default value instead of calculation
 }
-console.log(dayCount);
+console.log(`Number of days: ${dayCount}`);
+
+// Function to dynamically get a day name based on an index
+function getDayName(index) {
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  return days[index - 1] ?? "Invalid";
+}
+
+console.log(`Dynamic day retrieval (index 3): ${getDayName(3)}`);
+console.log(`Dynamic day retrieval (index 7): ${getDayName(7)}`);
+console.log(`Dynamic day retrieval (index 10): ${getDayName(10)}`);
