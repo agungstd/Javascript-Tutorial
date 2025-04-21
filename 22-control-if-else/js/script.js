@@ -1,54 +1,56 @@
-//if ... else percabangan bolean diantara true dan false
-// if{
-// --s tatemnt
-// }else{
-// --statemnt
+// if ... else branching based on boolean conditions
+// if(condition) execute statement
+// if(condition) { 
+// -- statement 
+// } else { 
+// -- statement 
 // }
 
 let age = 18;
-if (age == 18) console.log("Anda Bisa login");
-else console.log("Anda tidak berhak");
+if (age === 18) console.log("You can log in");
+else console.log("You are not eligible");
 
 if (age >= 19) {
-  console.log("anda Bisa Logain");
+  console.log("You can log in");
 } else {
-  console.log("anda tidak berhak");
+  console.log("You are not eligible");
 }
 
 age = 17;
 let country = "ID";
-if (age == 16 && country === "ID") {
-  console.log("Anda Bisa Mengemudi");
+if (age === 16 && country === "ID") {
+  console.log("You can drive");
 } else {
-  console.log("Anda ditolak");
+  console.log("You are denied");
 }
 
-// if (condition1) {
-//   // ...
-// } else if (condition2) {
-//   // ...
-// } else if (condition3) {
-//   //...
-// } else {
-//   //...
-// }
-
+// if-else ladder for multiple conditions
 let no = 3;
-let hari;
-if (no == 0) {
-  hari = "Ahad";
-} else if (no == 1) {
-  hari = "Senin";
-} else if (no == 2) {
-  hari = "Selasa";
-} else if (no == 3) {
-  hari = "Rabu";
-} else if (no == 4) {
-  hari = "Kamis";
-} else if (no == 4) {
-  hari = "Jumat";
+let day;
+if (no === 0) {
+  day = "Sunday";
+} else if (no === 1) {
+  day = "Monday";
+} else if (no === 2) {
+  day = "Tuesday";
+} else if (no === 3) {
+  day = "Wednesday";
+} else if (no === 4) {
+  day = "Thursday";
+} else if (no === 5) {
+  day = "Friday";
 } else {
-  hari = "Sabtu";
+  day = "Saturday";
 }
 
-console.log(hari);
+console.log(`The day is: ${day}`);
+
+// Function to get the day based on an index dynamically
+function getDay(index) {
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  return days[index] ?? "Invalid day";
+}
+
+console.log(`Dynamic day retrieval (index 3): ${getDay(3)}`);
+console.log(`Dynamic day retrieval (index 6): ${getDay(6)}`);
+console.log(`Dynamic day retrieval (index 10): ${getDay(10)}`);
