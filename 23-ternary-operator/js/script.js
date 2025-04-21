@@ -1,37 +1,47 @@
-// ternary -> untuk mengeksekusi blick dengan pengecekan bolean yang lebih sederhana
-//
+// Ternary operator - Executes a block based on boolean evaluation in a simplified way
+
 let age = 18;
-let pesan;
+let message;
 
 if (age >= 16) {
-  pesan = "Anda dapat mengemudi";
+  message = "You can drive";
 } else {
-  pesan = "Anda dilarang mengemudi";
+  message = "You are not allowed to drive";
 }
-console.log(pesan);
+console.log(message);
 
-age >= 16
-  ? (pesan = "Anda dapat Mengemudi 2")
-  : (pesan = "anda dilarang mengemudi");
-console.log(pesan);
-//alternatif cara lain
-pesan = age >= 16 ? "Anda dapat mengemudi 3" : "Anda dilarang mengemudi";
-console.log(pesan);
-let autentication = true;
-let url = autentication
-  ? (alert("akun anda akan disambungkan ke admin"), "/admin")
-  : (alert("Anda tidak diizinkan"), "/404");
+// Using ternary operator for the same logic
+message = age >= 16 ? "You can drive 2" : "You are not allowed to drive";
+console.log(message);
+
+// Another alternative
+message = age >= 16 ? "You can drive 3" : "You are not allowed to drive";
+console.log(message);
+
+let authentication = true;
+let url = authentication
+  ? (alert("Your account will be connected to the admin"), "/admin")
+  : (alert("You are not authorized"), "/404");
 console.log(url);
 
-let loced = 1;
-let changed = loced != 1 ? true : false;
-console.log(changed);
-//sederhanakan
-loced = 1;
-changed = loced != 1;
+let locked = 1;
+let changed = locked !== 1 ? true : false;
 console.log(changed);
 
-let spead = 90;
-let message =
-  spead >= 120 ? "Sangat Kencang" : spead >= 80 ? "Cepat" : "Lambat";
-console.log(message);
+// Simplified version
+locked = 1;
+changed = locked !== 1;
+console.log(changed);
+
+let speed = 90;
+let speedMessage =
+  speed >= 120 ? "Very Fast" : speed >= 80 ? "Fast" : "Slow";
+console.log(speedMessage);
+
+// Function to dynamically apply ternary conditions
+function ternaryCheck(condition, trueResult, falseResult) {
+  return condition ? trueResult : falseResult;
+}
+
+console.log(`Ternary check: ${ternaryCheck(age >= 16, "Eligible to drive", "Not eligible to drive")}`);
+console.log(`Ternary check: ${ternaryCheck(speed >= 120, "Very Fast", "Not Very Fast")}`);
