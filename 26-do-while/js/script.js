@@ -1,9 +1,9 @@
-// TODO: do while adalah perintah perulangan untuk mengeksekis block sampai bernilai false
-// NOTE: ini berbeda dengan while , do while minimal di eksekusi 1 kali ketika di jalankan
+// TODO: do-while loop is a statement for executing a block until the condition is false
+// NOTE: Unlike a while loop, a do-while loop is guaranteed to execute at least once
 
-// do{
+// do {
 //    statement
-// }while(expresion)
+// } while(expression);
 
 let count = 0;
 do {
@@ -11,22 +11,35 @@ do {
   count++;
 } while (count < 5);
 
-// contoh permainan
+// Example game
 const MIN = 1;
 const MAX = 10;
-let scretNumber = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+let secretNumber = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
 let guesses = 0;
 let hint = "";
 let number = 0;
+
 do {
-  let input = prompt(`Silahkan masukan nilai antara ${MIN} dan ${MAX}` + hint);
+  let input = prompt(`Enter a value between ${MIN} and ${MAX}${hint}`);
   number = parseInt(input);
   guesses++;
-  if (number > scretNumber) {
-    hint = ", dan lebih kecil " + number;
-  } else if (number < scretNumber) {
-    hint = ", dan lebih besar dari " + hint;
-  } else if (number == scretNumber) {
-    alert(`Selamata anda benar setelah ${guesses}`);
+
+  if (number > secretNumber) {
+    hint = `, and it is smaller than ${number}`;
+  } else if (number < secretNumber) {
+    hint = `, and it is larger than ${number}`;
+  } else {
+    alert(`Congratulations! You guessed correctly after ${guesses} tries.`);
   }
-} while (number != scretNumber);
+} while (number !== secretNumber);
+
+// Function to dynamically execute a do-while loop
+function dynamicLoop(start, condition) {
+  do {
+    console.log(start);
+    start++;
+  } while (start < condition);
+}
+
+console.log("Dynamic do-while loop execution:");
+dynamicLoop(5, 10);
