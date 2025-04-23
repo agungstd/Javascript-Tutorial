@@ -1,5 +1,3 @@
-// NOTE: operasi break digunakan untuk menghentikan script
-// break [label]
 for (let i = 0; i < 5; i++) {
   console.log(i);
 }
